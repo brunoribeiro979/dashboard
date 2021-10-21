@@ -13,23 +13,21 @@ body {
 .container {
   display: grid;
   max-width: 1200px;
-  grid-template-columns: 400px 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   gap: 30px;
+  margin: 60px 30px;
 }
 
 .container-jeremy {
-  grid-row: 1 / -1;
-  margin: 60px 0 60px 30px;
+  grid-row: 1 / 3;
 }
 
 .jeremy-1 {
   background-color: #5847eb;
   color: white;
-  padding: 40px 40px 80px 40px;
-  border-radius: 15px;
-  position: relative;
-  z-index: 100;
+  padding: 40px;
+  border-radius: 15px 15px 0 0;
 }
 
 .jeremy-1 img {
@@ -50,17 +48,15 @@ body {
 
 .jeremy-2 {
   background-color: #1c1f4a;
-  padding: 20px 40px 40px 40px;
-  border-radius: 15px;
-  position: relative;
-  top: -25px;
+  padding: 40px;
+  border-radius: 0 0 15px 15px;
 }
 
 .jeremy-2 button {
   display: block;
   background: none;
   border: none;
-  margin: 30px 0 20px 0;
+  margin-bottom: 20px;
   color: white;
   font-size: 1.2rem;
   cursor: pointer;
@@ -68,63 +64,57 @@ body {
 
 /*  CARDS  */
 .bg-work {
-  margin-top: 60px;
   background: #ff8c66;
   background-image: url(../images/icon-work.svg);
   background-position: right;
   background-repeat: no-repeat;
   height: 60px;
-  border-radius: 15px;
+  border-radius: 15px 15px 0 0;
 }
 
 .bg-play {
-  margin-top: 60px;
   background: #56c2e6;
   background-image: url(../images/icon-play.svg);
   background-position: right;
   background-repeat: no-repeat;
   height: 60px;
-  border-radius: 15px;
+  border-radius: 15px 15px 0 0;
 }
 
 .bg-study {
-  margin-top: 60px;
   background: #ff5c7c;
   background-image: url(../images/icon-study.svg);
   background-position: right;
   background-repeat: no-repeat;
   height: 60px;
-  border-radius: 15px;
+  border-radius: 15px 15px 0 0;
 }
 
 .bg-exercise {
-  margin-top: -20px;
   background: #4acf81;
   background-image: url(../images/icon-exercise.svg);
   background-position: right;
   background-repeat: no-repeat;
   height: 60px;
-  border-radius: 15px;
+  border-radius: 15px 15px 0 0;
 }
 
 .bg-social {
-  margin-top: -20px;
   background: #7536d3;
   background-image: url(../images/icon-social.svg);
   background-position: right;
   background-repeat: no-repeat;
   height: 60px;
-  border-radius: 15px;
+  border-radius: 15px 15px 0 0;
 }
 
 .bg-selfcare {
-  margin-top: -20px;
   background: #f1c65b;
   background-image: url(../images/icon-self-care.svg);
   background-position: right;
   background-repeat: no-repeat;
   height: 60px;
-  border-radius: 15px;
+  border-radius: 15px 15px 0 0;
 }
 
 .cards {
@@ -132,27 +122,70 @@ body {
   background: #1c1f4a;
   color: white;
   padding: 20px;
-  border-radius: 15px;
-  position: relative;
-  top: -20px;
-}
-
-.cards div {
-  justify-self: end;
+  border-radius: 0 0 15px 15px;
 }
 
 .cards p {
   font-size: 3rem;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .cards p:first-child {
   display: inline-block;
   font-size: 1rem;
   font-weight: bold;
-  margin-bottom: 40px;
+  margin-bottom: 18px;
 }
 
 .cards p:last-child {
   font-size: 1rem;
+}
+
+.cards-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+@media (min-width: 769px) and (max-width: 1000px) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+    margin: 30px;
+  }
+  .cards-container {
+    margin-top: 0px;
+    padding-top: 0px;
+  }
+  .container-jeremy {
+    margin-left: 0;
+  }
+  .jeremy-1 {
+    display: flex;
+  }
+  .jeremy-1 div,
+  .jeremy-1 p,
+  .jeremy-1 span {
+    margin-left: 20px;
+  }
+  .jeremy-1 img {
+    margin-bottom: 0;
+  }
+  .jeremy-2 {
+    display: flex;
+    justify-content: space-between;
+  }
+  .jeremy-2 button {
+    margin-bottom: 0px;
+  }
+  .bg-study,
+  .bg-play,
+  .bg-work {
+    margin-top: 0px;
+  }
 }
